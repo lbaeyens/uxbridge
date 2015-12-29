@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <h3>Title Settings</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @settings_titles.each do |title| %>
+        <tr>
+          <td><%= title.id %></td>
+          <td><%= title.title %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="actions">
+    <%= link_to 'Add Title', new_settings_title_path, class: 'btn btn-default btn-lg', id: 'new-article-btn' %>
+  </div>
+</div>

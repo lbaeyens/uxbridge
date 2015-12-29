@@ -1,0 +1,17 @@
+# generate "user" model using devise
+#-----------------------------------
+rails generate devise user
+rake db:migrate
+
+# have local devise views so you can customize, otherwise the default views will be used
+#---------------------------------------------------------------------------------------
+rails generate devise:views
+
+# handle devise messages with bootstrap
+#--------------------------------------
+https://github.com/plataformatec/devise/wiki/How-To:-Integrate-I18n-Flash-Messages-with-Devise-and-Bootstrap
+
+# add login helper method support in the rails_helper.rb
+#-------------------------------------------------------
+include Warden::Test::Helpers
+Warden.test_mode!

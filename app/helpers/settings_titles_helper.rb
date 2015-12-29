@@ -1,0 +1,2 @@
+module SettingsTitlesHelper
+end

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3911695238">
+    <data-source source="LOCAL" name="uxbridge_development" uuid="de91f60d-c703-4d25-a99f-fd351ae61d67">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/uxbridge_development</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="uxbridge_test" uuid="73569736-ed19-41a9-b5ce-f7ed7e911379">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/uxbridge_test</jdbc-url>
+    </data-source>
+  </component>
+</project>
