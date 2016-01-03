@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <h3>Brand Settings</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Brand Name</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @settings_brands.each do |brand| %>
+        <tr>
+          <td><%= brand.id %></td>
+          <td><%= brand.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="actions">
+    <%= link_to 'Add Brand', new_settings_brand_path, class: 'btn btn-default btn-lg', id: 'new-article-btn' %>
+  </div>
+</div>

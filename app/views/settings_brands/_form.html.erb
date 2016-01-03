@@ -1,17 +1,17 @@
 <div class="row">
   <div class="col-md-12">
-    <%= form_for(@settings_title, url: settings_titles_path, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+    <%= form_for(@settings_brand, url: settings_brands_path, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
 
-        <% if @settings_title.errors.any? %>
+        <% if @settings_brand.errors.any? %>
             <div class="panel panel-danger col-md-offset-1">
               <div class="panel-heading">
                 <h2 class="panel-title">
-                  <%= pluralize(@settings_title.errors.count, 'error') %>
-                  prohibited this title from being saved:
+                  <%= pluralize(@settings_brand.errors.count, 'error') %>
+                  prohibited this brand from being saved:
                 </h2>
                 <div class="panel-body">
                   <ul>
-                    <% @settings_title.errors.full_messages.each do |msg| %>
+                    <% @settings_brand.errors.full_messages.each do |msg| %>
                         <li>
                           <%= msg %>
                         </li>
@@ -23,10 +23,10 @@
         <% end %>
         <div class="form-group">
           <div class="control-label col-md-1">
-            <%= f.label :title %>
+            <%= f.label :name %>
           </div>
           <div class="col-md-11">
-            <%= f.text_field :title, class: 'form-control', placeholder: 'Title', autofocus: true %>
+            <%= f.text_field :name, class: 'form-control', placeholder: 'Brand name', autofocus: true %>
           </div>
         </div>
 

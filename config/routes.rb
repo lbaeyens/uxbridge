@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :settings_titles
+  resources :settings_titles, :settings_brands
 
   get 'dashboard/index'
 
