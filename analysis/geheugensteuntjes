@@ -15,3 +15,14 @@ https://github.com/plataformatec/devise/wiki/How-To:-Integrate-I18n-Flash-Messag
 #-------------------------------------------------------
 include Warden::Test::Helpers
 Warden.test_mode!
+
+# strong parameters in rails 4
+#-----------------------------
+http://edgeapi.rubyonrails.org/classes/ActionController/StrongParameters.html
+
+# create settings object
+#-----------------------
+1. create new feature spec file and write basic spec, add to the git repository
+2. create specific views in app/views folder
+3. make an index.html.erb and new.html.erb file
+

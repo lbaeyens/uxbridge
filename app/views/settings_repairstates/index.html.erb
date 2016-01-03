@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <h3>Repair State Settings</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Repair-state</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @settings_repairstates.each do |repairstate| %>
+        <tr>
+          <td><%= repairstate.id %></td>
+          <td><%= repairstate.description %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="actions">
+    <%= link_to 'Add Repair State', new_settings_repairstate_path, class: 'btn btn-default btn-lg', id: 'new-repairstate-btn' %>
+  </div>
+</div>

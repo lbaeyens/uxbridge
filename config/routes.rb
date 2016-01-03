@@ -1,12 +1,7 @@
 Rails.application.routes.draw do
-#  get 'settings_titles/index'
-#  get 'settings_titles/new'
-#  post 'settings_titles/new'
-
-
   devise_for :users
 
-  resources :settings_titles, :settings_brands
+  resources :settings_titles, :settings_brands, :settings_repairstates
 
   get 'dashboard/index'
 
