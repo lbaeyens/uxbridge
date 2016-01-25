@@ -12,7 +12,7 @@ class SettingsMachinegroupsController < ApplicationController
     @settings_machinegroup = Machinegroup.new(machinegroup_params)
     if @settings_machinegroup.save
       flash[:success] = 'Machine Group has been created.'
-      redirect_to settings_brands_path
+      redirect_to settings_machinegroups_path
     else
       flash.now[:danger] = 'Machine Group has not been created.'
       render :new
