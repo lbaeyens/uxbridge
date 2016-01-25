@@ -26,7 +26,9 @@ http://edgeapi.rubyonrails.org/classes/ActionController/StrongParameters.html
 2. update the application.html.erb inserting net new menu item (or separate it out in a separate settings menu .html file and render it in)
 3. this menu change will brake other tests as well! don't worry, we'll fix it.
 4. add the :settings_<object> to the resources in the routes.rb file
-2. create specific views in app/views folder
-3. make an index.html.erb and new.html.erb file
+5. generate controller
+6. generate model + do migrations
+7. create specific views in app/views folder
+8. make an index.html.erb and new.html.erb file
 
 

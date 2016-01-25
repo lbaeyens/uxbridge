@@ -1,0 +1,22 @@
+<div class="table-responsive">
+  <h3>Machine Group Settings</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Machine Group name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @settings_machinegroups.each do |machinegroup| %>
+        <tr>
+          <td><%= machinegroup.id %></td>
+          <td><%= machinegroup.name %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="actions">
+    <%= link_to 'Add Machine Group', new_settings_machinegroup_path, class: 'btn btn-default btn-lg', id: 'new-brand-btn' %>
+  </div>
+</div>
