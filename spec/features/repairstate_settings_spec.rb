@@ -7,12 +7,12 @@ RSpec.feature 'Repair State settings page' do
 
     login_as @john
     visit '/'
-    expect(page).to have_link('Repair State')
+    expect(page).to have_link('Repair States')
   end
 
   scenario 'is not accessible when no user is logged in' do
     visit '/'
-    expect(page).not_to have_link('Repair State')
+    expect(page).not_to have_link('Repair States')
   end
 
   scenario 'enables to add a new Repair State' do
@@ -20,7 +20,7 @@ RSpec.feature 'Repair State settings page' do
 
     login_as @john
     visit '/'
-    click_link 'Repair State'
+    click_link 'Repair States'
     expect(page).to have_link('Add Repair State')
   end
 end
