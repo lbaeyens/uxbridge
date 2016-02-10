@@ -42,8 +42,8 @@ RSpec.feature 'new Machine Group page' do
   end
 
   scenario 'machine group needs to be unique' do
-    unique_brand = Machinegroup.create!(name: 'Gazon')
-    unique_brand.save
+    unique_group = Machinegroup.create!(name: 'Gazon')
+    unique_group.save
 
     fill_in 'Machine Group name', with: 'Gazon'
     click_button 'Create Machine Group'

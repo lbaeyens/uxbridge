@@ -38,6 +38,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'shoulda', '3.5.0'
+  gem 'shoulda-matchers'
+  gem 'shoulda-context'
   gem 'rspec-rails', '3.3.3'
   gem 'guard-rspec', require: false
   gem 'spring-commands-rspec'

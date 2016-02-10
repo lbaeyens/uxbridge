@@ -1,0 +1,24 @@
+<div class="table-responsive">
+  <h3>Machine Type Settings</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Machine Type name</th>
+      <th>Machine Group</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @settings_machinetypes.each do |machinetype| %>
+        <tr>
+          <td><%= machinetype.id %></td>
+          <td><%= machinetype.name %></td>
+          <td><%= machinetype.machinegroup.name %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="actions">
+    <%= link_to 'Add Machine Type', new_settings_machinetype_path, class: 'btn btn-default btn-lg', id: 'new-brand-btn' %>
+  </div>
+</div>

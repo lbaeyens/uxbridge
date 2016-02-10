@@ -30,5 +30,9 @@ http://edgeapi.rubyonrails.org/classes/ActionController/StrongParameters.html
 6. generate model + do migrations
 7. create specific views in app/views folder
 8. make an index.html.erb and new.html.erb file
+9. remove all automatically generated stuff that is not imediately used (like empty controller specs, javascript, stylesheets, views, ...)
 
-
+# create model with association to other model (machinetype belongs to a machinegroup)
+#-------------------------------------------------------------------------------------
+1. generate the model: > rails g model machinetype name:string machinegroup:references
+2. run the db migration: > rake db:migrate
