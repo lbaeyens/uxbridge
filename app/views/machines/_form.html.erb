@@ -95,6 +95,15 @@
             <%= f.text_field :minimalstock, class: 'form-control', placeholder: 'Minimal Stock', autofocus: true %>
           </div>
           <div class="control-label col-md-3">
+            <%= f.label :currentstock, 'Current Stock' %>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :currentstock, class: 'form-control', placeholder: 'Current Stock', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-offset-4 col-md-3">
             <%= f.label :warehouselocation, 'Warehouse Location' %>
           </div>
           <div class="col-md-5">
