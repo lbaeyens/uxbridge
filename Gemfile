@@ -6,6 +6,7 @@ gem 'rails', '4.2.4'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'autoprefixer-rails', '~> 6.0.3'
 gem 'devise', '~> 3.5.2'
+# gem 'money-rails', '~> 1.6.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -28,15 +29,6 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   gem 'shoulda', '3.5.0'
   gem 'shoulda-matchers'
@@ -54,7 +46,7 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  gem 'spring', '~> 1.6.4'
 end
 
 group :test do

@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <h3>Catalogue</h3>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Type</th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Unit price</th>
+      <th>Stock</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @machines.each do |machine| %>
+        <tr>
+          <td><%= machine.machinetype.name %></td>
+          <td><%= machine.brand.name %></td>
+          <td><%= machine.model %></td>
+          <td><%= machine.unitprice %></td>
+          <td><%= machine.currentstock %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <div class="actions">
+    <% if user_signed_in? %>
+      <%= link_to 'Add Machine', new_machine_path, class: 'btn btn-default btn-lg', id: 'new-brand-btn' %>
+    <% end %>
+  </div>
+</div>

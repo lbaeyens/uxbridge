@@ -1,0 +1,112 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@machine, url: machines_path, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+
+        <% if @machine.errors.any? %>
+            <div class="panel panel-danger col-md-offset-1">
+              <div class="panel-heading">
+                <h2 class="panel-title">
+                  <%= pluralize(@machine.errors.count, 'error') %>
+                  prohibited this machine type from being saved:
+                </h2>
+                <div class="panel-body">
+                  <ul>
+                    <% @machine.errors.full_messages.each do |msg| %>
+                        <li>
+                          <%= msg %>
+                        </li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        <% end %>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label "Brand" %>
+          </div>
+          <div class="col-md-3">
+            <%# drop down box showing all Brand records, the selected id is assigned to :brand_id of the machine object %>
+            <%= f.collection_select :brand_id, Brand.all, :id, :name, {prompt: true}, {class: "form-control"} %>
+          </div>
+          <div class="control-label col-md-2">
+            <%= f.label :model %>
+          </div>
+          <div class="col-md-5">
+            <%= f.text_field :model, class: 'form-control', placeholder: 'Machine model', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label "Machine Type" %>
+          </div>
+          <div class="col-md-3">
+            <%# drop down box showing all Machinetype records, the selected id is assigned to :machinetype_id of the machine object %>
+            <%= f.collection_select :machinetype_id, Machinetype.all, :id, :name, {prompt: true}, {class: "form-control"} %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :description %>
+          </div>
+          <div class="col-md-10">
+            <%= f.text_field :description, class: 'form-control', placeholder: 'Description', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :engine %>
+          </div>
+          <div class="col-md-10">
+            <%= f.text_field :engine, class: 'form-control', placeholder: 'Engine', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :purchaseprice, 'Purchase Price' %>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :purchaseprice, class: 'form-control', placeholder: 'Purchace Price', autofocus: true %>
+          </div>
+          <div class="control-label col-md-3">
+            <%= f.label :unitprice, 'Unit Price' %>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :unitprice, class: 'form-control', placeholder: 'Unit Price', autofocus: true %>
+          </div>
+          <div class="control-label col-md-1">
+            <%= f.label :vatrate, 'VAT'%>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :vatrate, class: 'form-control', placeholder: 'VAT rate', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :minimalstock, 'Minimal Stock' %>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :minimalstock, class: 'form-control', placeholder: 'Minimal Stock', autofocus: true %>
+          </div>
+          <div class="control-label col-md-3">
+            <%= f.label :warehouselocation, 'Warehouse Location' %>
+          </div>
+          <div class="col-md-5">
+            <%= f.text_field :warehouselocation, class: 'form-control', placeholder: 'Warehouse location', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-offset-1 col-md-11">
+            <%= f.submit "Create Machine", class: 'btn btn-primary btn-lg pull-right' %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

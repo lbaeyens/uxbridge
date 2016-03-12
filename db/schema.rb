@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160130122124) do
+ActiveRecord::Schema.define(version: 20160306143246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,25 @@ ActiveRecord::Schema.define(version: 20160130122124) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "machines", force: :cascade do |t|
+    t.integer  "machinetype_id"
+    t.integer  "brand_id"
+    t.string   "model"
+    t.string   "engine"
+    t.string   "description"
+    t.decimal  "purchaseprice"
+    t.decimal  "unitprice"
+    t.decimal  "vatrate"
+    t.decimal  "currentstock"
+    t.decimal  "minimalstock"
+    t.string   "warehouselocation"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "machines", ["brand_id"], name: "index_machines_on_brand_id", using: :btree
+  add_index "machines", ["machinetype_id"], name: "index_machines_on_machinetype_id", using: :btree
 
   create_table "machinetypes", force: :cascade do |t|
     t.string   "name"
@@ -67,5 +86,7 @@ ActiveRecord::Schema.define(version: 20160130122124) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "machines", "brands"
+  add_foreign_key "machines", "machinetypes"
   add_foreign_key "machinetypes", "machinegroups"
 end
