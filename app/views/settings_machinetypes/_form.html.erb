@@ -22,18 +22,21 @@
             </div>
         <% end %>
         <div class="form-group">
-          <div class="control-label col-md-1">
+          <div class="control-label col-md-2">
             <%= f.label :name %>
           </div>
-          <div class="col-md-11">
+          <div class="col-md-10">
             <%= f.text_field :name, class: 'form-control', placeholder: 'Machine Type name', autofocus: true %>
           </div>
-          <div class="control-label col-md-1">
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
             <%= f.label "Machine Group" %>
           </div>
-          <div class="col-md-11">
+          <div class="col-md-2">
             <%# drop down box showing all Machinegroup records, the selected id is assigned to :machinegroup_id of the machinetype object %>
-            <%= f.collection_select :machinegroup_id, Machinegroup.all, :id, :name, prompt: true %>
+            <%= f.collection_select :machinegroup_id, Machinegroup.all, :id, :name, {prompt: true}, {class: "form-control"} %>
           </div>
         </div>
 
