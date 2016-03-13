@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e3b670-5610-4a2a-9395-deb9e10f1e4f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uxbridge.iml" afterPath="$PROJECT_DIR$/.idea/uxbridge.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/machines_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/machines_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/settings_machinetypes/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/settings_machinetypes/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/settings_brands_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/settings_brands_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/settings_machinegroups_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/settings_machinegroups_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/settings_machinetypes_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/settings_machinetypes_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/settings_repairstates_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/settings_repairstates_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/settings_titles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/settings_titles_controller.rb" />
     </list>
     <ignored path="uxbridge.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -121,18 +121,8 @@
       <file leaf-file-name="machines_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/machines_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7021661">
-              <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/machines/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.375">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state vertical-scroll-proportion="1.0288808">
+              <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -165,19 +155,16 @@
         <option value="$PROJECT_DIR$/spec/features/signing_user_up_spec.rb" />
         <option value="$PROJECT_DIR$/spec/support/devise.rb" />
         <option value="$PROJECT_DIR$/app/views/settings_titles/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/settings_titles_controller.rb" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/app/models/title.rb" />
         <option value="$PROJECT_DIR$/spec/features/title_settings_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/settings_brands/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/brand.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/settings_brands_controller.rb" />
         <option value="$PROJECT_DIR$/spec/features/brand_settings_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/settings_repairstates/new.html.erb" />
         <option value="$PROJECT_DIR$/app/models/repairstate.rb" />
         <option value="$PROJECT_DIR$/app/controllers/settings_repairstate_controller.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/settings_repairstates_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/settings_titles/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/settings_brands/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/settings_repairstates/index.html.erb" />
@@ -187,7 +174,6 @@
         <option value="$PROJECT_DIR$/spec/features/repairstate_settings_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/settings_machinegroups/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/settings_machinegroups/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/settings_machinegroups_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_settingsmenu.html.erb" />
         <option value="$PROJECT_DIR$/app/models/machinegroup.rb" />
         <option value="$PROJECT_DIR$/app/controllers/settings_machine_type_controller.rb" />
@@ -197,7 +183,6 @@
         <option value="$PROJECT_DIR$/app/controllers/settings_machinetype_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/settings_machinetypes/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/settings_machinetypes/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/settings_machinetypes_controller.rb" />
         <option value="$PROJECT_DIR$/spec/features/machinegroup_settings_spec.rb" />
         <option value="$PROJECT_DIR$/spec/features/machinetype_settings_spec.rb" />
         <option value="$PROJECT_DIR$/app/models/machinetype.rb" />
@@ -213,6 +198,11 @@
         <option value="$PROJECT_DIR$/app/views/settings_machinetypes/_form.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/machines_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/settings_machinegroups_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/settings_brands_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/settings_machinetypes_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/settings_repairstates_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/settings_titles_controller.rb" />
       </list>
     </option>
   </component>
@@ -913,7 +903,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457788928807</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="check in Machines controller whether user is logged, to prevent creating new machines in case of not being logged in">
+      <created>1457867396919</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1457867396919</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1010,7 +1006,8 @@
     <MESSAGE value="link machine types to machine groups" />
     <MESSAGE value="complete create machine form functionality" />
     <MESSAGE value="add stock information to machine form" />
-    <option name="LAST_COMMIT_MESSAGE" value="add stock information to machine form" />
+    <MESSAGE value="check in Machines controller whether user is logged, to prevent creating new machines in case of not being logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="check in Machines controller whether user is logged, to prevent creating new machines in case of not being logged in" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1023,20 +1020,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/settings_titles/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.69078946">
-          <caret line="34" column="41" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/settings_brands/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40425533">
-          <caret line="19" column="101" selection-start-line="19" selection-start-column="101" selection-end-line="19" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/settings_brands/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1121,13 +1104,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/settings_machinegroups_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/settings_machinetypes/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
@@ -1203,13 +1179,6 @@
         <state vertical-scroll-proportion="0.0625">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0625">
-          <caret line="2" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1296,22 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/settings_brands_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8125">
-          <caret line="26" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/settings_machinetypes_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/rake">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1384,18 +1337,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/brand.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.054151624">
+          <caret line="2" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/machines/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.375">
+        <state vertical-scroll-proportion="0.509434">
           <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/settings_machinegroups_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/settings_brands_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8122744">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/settings_machinetypes_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027075812">
+          <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/settings_titles_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.027075812">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/settings_repairstates_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8122744">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/machines_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7021661">
-          <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
+        <state vertical-scroll-proportion="1.0288808">
+          <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
           <folding />
         </state>
       </provider>

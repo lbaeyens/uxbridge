@@ -1,4 +1,5 @@
 class SettingsBrandsController < ApplicationController
+  before_action :require_login
 
   def index
     @settings_brands = Brand.all
@@ -23,6 +24,13 @@ class SettingsBrandsController < ApplicationController
   private
   def brand_params
     params.require(:brand).permit(:name)
+  end
+
+  def require_login
+    unless user_signed_in?
+      flash[:error] = "You must be logged in to manage Settings"
+      redirect_to new_user_session_url # halts request cycle
+    end
   end
 
 end

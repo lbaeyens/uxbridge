@@ -1,4 +1,5 @@
 class SettingsMachinetypesController < ApplicationController
+  before_action :require_login
 
   def index
     @settings_machinetypes = Machinetype.all
@@ -23,6 +24,13 @@ class SettingsMachinetypesController < ApplicationController
   private
   def machinetype_params
     params.require(:machinetype).permit(:name, :machinegroup_id)
+  end
+
+  def require_login
+    unless user_signed_in?
+      flash[:error] = "You must be logged in to manage Brand settings"
+      redirect_to new_user_session_url # halts request cycle
+    end
   end
 
 end

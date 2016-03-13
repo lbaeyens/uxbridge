@@ -1,4 +1,6 @@
 class SettingsRepairstatesController < ApplicationController
+  before_action :require_login
+
   def index
     @settings_repairstates = Repairstate.all
   end
@@ -22,6 +24,13 @@ class SettingsRepairstatesController < ApplicationController
   private
   def repairstate_params
     params.require(:repairstate).permit(:description)
+  end
+
+  def require_login
+    unless user_signed_in?
+      flash[:error] = "You must be logged in to manage Settings"
+      redirect_to new_user_session_url # halts request cycle
+    end
   end
 
 end
