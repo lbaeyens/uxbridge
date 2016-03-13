@@ -32,7 +32,7 @@ class MachinesController < ApplicationController
   end
 
   def set_machine
-    @machine = Machine.all.find(param[:id])
+    @machine = Machine.all.find(params[:id])
   end
 
   def require_login
