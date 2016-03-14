@@ -1,11 +1,11 @@
 module ApplicationHelper
-  def action_button_text
+  def action_button_caption( object )
     if controller.action_name == "new"
-       return "Add"
+       return "Add " + object
     elsif controller.action_name == "edit"
-       return "Update"
+       return "Update " + object
     else
-       return "Submit"
+       return "Submit " + object
     end
   end
 end
