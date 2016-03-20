@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-12">
-    <%= form_for(@machine, url: machines_path, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+    <%= form_for(@machine, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
 
         <% if @machine.errors.any? %>
             <div class="panel panel-danger col-md-offset-1">

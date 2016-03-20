@@ -1,6 +1,6 @@
 class MachinesController < ApplicationController
   before_action :set_machine, except: [:index, :new, :create]
-  before_action :require_login, except: [:index, :show]
+  before_action :require_login, except: [:index, :edit]
 
   def index
     @machines = Machine.all
@@ -22,7 +22,21 @@ class MachinesController < ApplicationController
 
   end
 
-  def show
+  def edit
+
+  end
+
+  def update
+    if @machine.update(machine_params)
+      flash[:success] = 'machine has been updated.'
+      redirect_to machines_path
+    else
+      flash.now[:danger] = 'machine has not been updated.'
+      render :edit
+    end
+  end
+
+  def destroy
 
   end
 

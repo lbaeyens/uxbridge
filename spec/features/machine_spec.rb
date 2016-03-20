@@ -40,4 +40,17 @@ RSpec.feature 'existing machines' do
     visit '/machines'
     expect(page).to have_link('RX22')
   end
+
+#TODO implement table row handling buttons through implementing rspec scenario's
+  scenario 'have a link to an edit form', :skip => 'edit button at the end of the table row still to be implemented' do
+
+  end
+
+  scenario 'have a link to a view form', :skip => 'view button at the end of the table row still to be implemented' do
+
+  end
+
+  scenario 'have a delete button', :skip => 'delete button at the end of the table row still to be implemented' do
+
+  end
 end

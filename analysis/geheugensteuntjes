@@ -37,3 +37,7 @@ http://edgeapi.rubyonrails.org/classes/ActionController/StrongParameters.html
 1. generate the model: > rails g model machinetype name:string machinegroup:references
 2. run the db migration: > rake db:migrate
 
+# pending scenario's
+#-------------------
+use <skip 'scenario description' do end> block
+or <scenario 'scenario description', :skip => 'reason for skipping' do end> block
