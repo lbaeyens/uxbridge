@@ -50,7 +50,11 @@ RSpec.feature 'existing machines' do
 
   end
 
-  scenario 'have a delete button', :skip => 'delete button at the end of the table row still to be implemented' do
-
+  scenario 'have a delete button' do
+    visit '/machines'
+    link = "//a[contains(@href, '/machines/#{@existing_machine.id}') and @data-method='delete']"
+    find(:xpath, link).click
+    expect(page).to have_content("Machine has been deleted")
   end
+
 end

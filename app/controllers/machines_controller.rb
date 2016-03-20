@@ -37,7 +37,9 @@ class MachinesController < ApplicationController
   end
 
   def destroy
-
+    @machine.destroy
+    flash[:success] = "Machine has been deleted"
+    redirect_to machines_path
   end
 
   private
