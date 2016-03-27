@@ -1,0 +1,127 @@
+<div class="row">
+  <div class="col-md-12">
+    <%= form_for(@customer, :html => {class: 'form-horizontal', role: 'form'}) do |f| %>
+
+        <% if @customer.errors.any? %>
+            <div class="panel panel-danger col-md-offset-1">
+              <div class="panel-heading">
+                <h2 class="panel-title">
+                  <%= pluralize(@customer.errors.count, 'error') %>
+                  prohibited this customer type from being saved:
+                </h2>
+                <div class="panel-body">
+                  <ul>
+                    <% @customer.errors.full_messages.each do |msg| %>
+                        <li>
+                          <%= msg %>
+                        </li>
+                    <% end %>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        <% end %>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label "Title" %>
+          </div>
+          <div class="col-md-2">
+            <%# drop down box showing all Title records, the selected id is assigned to :title_id of the customer object %>
+            <%= f.collection_select :title_id, Title.all, :id, :title, {prompt: true}, {class: "form-control"} %>
+          </div>
+          <div class="control-label col-md-2">
+            <%= f.label "Name" %>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :lastname, class: 'form-control', placeholder: "customer's last name", autofocus: true %>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :name, class: 'form-control', placeholder: "customer's name", autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :address %>
+          </div>
+          <div class="col-md-6">
+            <%= f.text_field :address, class: 'form-control', placeholder: 'Address', autofocus: true %>
+          </div>
+          <div class="control-label col-md-2">
+            <%= f.label "Locality" %>
+          </div>
+          <div class="col-md-2">
+            <%# drop down box showing all locality records, the selected id is assigned to :postalcode_id of the customer object %>
+            <%= f.collection_select :postalcode_id, Postalcode.all, :id, :locality, {prompt: true}, {class: "form-control"} %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :telephone %>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :telephone, class: 'form-control', placeholder: 'phone number', autofocus: true %>
+          </div>
+          <div class="control-label col-md-2">
+            <%= f.label :mobilephone %>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :mobilephone, class: 'form-control', placeholder: 'mobile number', autofocus: true %>
+          </div>
+          <div class="control-label col-md-2">
+            <%= f.label :fax %>
+          </div>
+          <div class="col-md-2">
+            <%= f.text_field :fax, class: 'form-control', placeholder: 'fax number', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :email, 'Email Address' %>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :email, class: 'form-control', placeholder: 'email address', autofocus: true %>
+          </div>
+          <div class="control-label col-md-offset-2 col-md-2">
+            <%= f.label :contact, 'Contact person' %>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :contact, class: 'form-control', placeholder: 'contact person', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :vatnumber, 'VAT number'%>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :vatnumber, class: 'form-control', placeholder: 'VAT number', autofocus: true %>
+          </div>
+          <div class="control-label col-md-offset-2 col-md-2">
+            <%= f.label :bankaccount, 'Bank account' %>
+          </div>
+          <div class="col-md-3">
+            <%= f.text_field :bankaccount, class: 'form-control', placeholder: 'bank account', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="control-label col-md-2">
+            <%= f.label :remarks %>
+          </div>
+          <div class="col-md-5">
+            <%= f.text_field :remarks, class: 'form-control', placeholder: 'remarks', autofocus: true %>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-offset-1 col-md-11">
+            <%= f.submit action_button_caption("customer"), class: 'btn btn-primary btn-lg pull-right' %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</div>

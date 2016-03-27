@@ -5,6 +5,10 @@ class CustomersController < ApplicationController
     @customers = Customer.all
   end
 
+  def new
+    @customer = Customer.new
+  end
+
   private
   def require_login
     unless user_signed_in?

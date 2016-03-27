@@ -17,3 +17,18 @@ RSpec.feature 'Customers page' do
 
 end
 
+RSpec.feature 'new customers' do
+
+  scenario 'can be created when user is logged in' do
+    @john = User.create!(email: 'john@example.com', password: 'password')
+
+    login_as @john
+    visit '/customers'
+    expect(page).to have_link('Add Customer')
+  end
+
+  scenario 'cannot be created when no user is logged in' do
+    visit '/customers'
+    expect(page).not_to have_link('Add Customer')
+  end
+end
