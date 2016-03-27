@@ -43,11 +43,11 @@ RSpec.feature 'existing machines' do
     expect(page).to have_content("Machine has been deleted")
   end
 
-  scenario 'have a link to an edit form', :pending => 'issue with test, content is in page.html'  do
+  scenario 'have a link to an edit form'  do
     visit '/machines'
     find("a[href='/machines/#{@existing_machine.id}/edit']").click
     expect(page).to have_content('Machine details')
-    expect(page).to have_content(@existing_machine.model)
+    expect(page).to have_field('Model', with: @existing_machine.model)
   end
 
 end

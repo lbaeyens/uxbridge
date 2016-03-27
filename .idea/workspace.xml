@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64e3b670-5610-4a2a-9395-deb9e10f1e4f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/customers/_form.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/customers/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/customers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/customers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/customer_spec.rb" afterPath="$PROJECT_DIR$/spec/features/customer_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/features/machine_spec.rb" afterPath="$PROJECT_DIR$/spec/features/machine_spec.rb" />
     </list>
     <ignored path="uxbridge.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,8 +138,8 @@
       <file leaf-file-name="machine_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/features/machine_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37906137">
-              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.8104693">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -985,7 +982,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459079776835</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="create customer form">
+      <created>1459082445641</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1459082445641</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1100,7 +1103,8 @@
     <MESSAGE value="enable editing of existing machine + usage of glyphicons" />
     <MESSAGE value="enable deleting of existing machine" />
     <MESSAGE value="create customers index page, only accessible when logged in" />
-    <option name="LAST_COMMIT_MESSAGE" value="create customers index page, only accessible when logged in" />
+    <MESSAGE value="create customer form" />
+    <option name="LAST_COMMIT_MESSAGE" value="create customer form" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1497,8 +1501,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/features/machine_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37906137">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.8104693">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
