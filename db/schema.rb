@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160306143246) do
+ActiveRecord::Schema.define(version: 20160327113429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,27 @@ ActiveRecord::Schema.define(version: 20160306143246) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "customers", force: :cascade do |t|
+    t.string   "lastname"
+    t.string   "name"
+    t.integer  "title_id"
+    t.string   "address"
+    t.integer  "postalcode_id"
+    t.string   "telephone"
+    t.string   "mobilephone"
+    t.string   "fax"
+    t.string   "email"
+    t.string   "contact"
+    t.string   "vatnumber"
+    t.string   "bankaccount"
+    t.text     "remarks"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "customers", ["postalcode_id"], name: "index_customers_on_postalcode_id", using: :btree
+  add_index "customers", ["title_id"], name: "index_customers_on_title_id", using: :btree
 
   create_table "machinegroups", force: :cascade do |t|
     t.string   "name"
@@ -56,6 +77,13 @@ ActiveRecord::Schema.define(version: 20160306143246) do
 
   add_index "machinetypes", ["machinegroup_id"], name: "index_machinetypes_on_machinegroup_id", using: :btree
 
+  create_table "postalcodes", force: :cascade do |t|
+    t.string   "postalcode"
+    t.string   "locality"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "repairstates", force: :cascade do |t|
     t.string   "description"
     t.datetime "created_at",  null: false
@@ -86,6 +114,8 @@ ActiveRecord::Schema.define(version: 20160306143246) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "customers", "postalcodes"
+  add_foreign_key "customers", "titles"
   add_foreign_key "machines", "brands"
   add_foreign_key "machines", "machinetypes"
   add_foreign_key "machinetypes", "machinegroups"

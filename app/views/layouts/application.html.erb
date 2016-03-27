@@ -35,6 +35,8 @@
               <%# Catalogue %>
               <li><%= link_to 'Catalogue', machines_path %></li>
               <% if user_signed_in? %>
+                  <%# Customers Menu %>
+                  <li><%= link_to 'Customers', customers_path %></li>
                     <%# Settings Menu %>
                     <%= render 'layouts/settingsmenu' %>
                   <% end %>
