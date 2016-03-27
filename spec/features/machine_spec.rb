@@ -33,28 +33,21 @@ RSpec.feature 'existing machines' do
     brand = Brand.create!(name: 'TORO')
     machinegroup = Machinegroup.create!(name: 'GAZON')
     machinetype = Machinetype.create!(name: 'ZITMAAIER', machinegroup_id: machinegroup.id)
-    @existing_machine = Machine.create!(brand_id: brand.id, model: 'RX22', machinetype_id: machinetype.id )
+    @existing_machine = Machine.create!(brand_id: brand.id, model: 'RX22', machinetype_id: machinetype.id, description: 'fantastic machine', engine: '100PK' )
   end
 
-  scenario 'can be selected and details shown' do
-    visit '/machines'
-    expect(page).to have_link('RX22')
-  end
-
-#TODO implement table row handling buttons through implementing rspec scenario's
-  scenario 'have a link to an edit form', :skip => 'edit button at the end of the table row still to be implemented' do
-
-  end
-
-  scenario 'have a link to a view form', :skip => 'view button at the end of the table row still to be implemented' do
-
-  end
-
-  scenario 'have a delete button' do
+  scenario 'can be deleted' do
     visit '/machines'
     link = "//a[contains(@href, '/machines/#{@existing_machine.id}') and @data-method='delete']"
     find(:xpath, link).click
     expect(page).to have_content("Machine has been deleted")
+  end
+
+  scenario 'have a link to an edit form'  do
+    visit '/machines'
+    find("a[href='/machines/#{@existing_machine.id}/edit']").click
+    expect(page).to have_content('Machine details')
+    expect(page).to have_content(@existing_machine.model)
   end
 
 end

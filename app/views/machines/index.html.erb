@@ -16,7 +16,7 @@
         <tr>
           <td><%= machine.machinetype.name %></td>
           <td><%= machine.brand.name %></td>
-          <td><%= link_to machine.model, [machine] %></td>
+          <td><%= machine.model %></td>
           <td><%= number_to_currency(machine.unitprice, unit: '€', format: '%n %u', precision: 2, separator: ".", delimiter: ',') %></td>
           <td><%= machine.currentstock %></td>
 					<td><%= link_to edit_machine_path(machine), class: "btn btn-default btn-xs" do %>
