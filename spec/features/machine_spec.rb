@@ -10,7 +10,7 @@ end
 
 RSpec.feature 'new machines' do
 
-  scenario 'can be created when user is logged in' do
+  scenario 'can be added when user is logged in' do
     @john = User.create!(email: 'john@example.com', password: 'password')
 
     login_as @john
@@ -18,7 +18,7 @@ RSpec.feature 'new machines' do
     expect(page).to have_link('Add Machine')
   end
 
-  scenario 'cannot be created when no user is logged in' do
+  scenario 'cannot be added when no user is logged in' do
     visit '/machines'
     expect(page).not_to have_link('Add Machine')
   end
