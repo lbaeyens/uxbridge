@@ -1,4 +1,5 @@
 class CustomersController < ApplicationController
+  before_action :set_customer, except: [:index, :new, :create]
   before_action :require_login
 
   def index
@@ -21,9 +22,33 @@ class CustomersController < ApplicationController
 
   end
 
+  def edit
+
+  end
+
+  def update
+    if @customer.update(customer_params)
+      flash[:success] = 'customer has been updated.'
+      redirect_to customers_path
+    else
+      flash.now[:danger] = 'customer has not been updated.'
+      render :edit
+    end
+  end
+
+  def destroy
+    @customer.destroy
+    flash[:success] = "Customer has been deleted"
+    redirect_to customers_path
+  end
+
   private
   def customer_params
     params.require(:customer).permit(:lastname, :name, :address, :postalcode_id, :telephone, :mobilephone, :fax, :email, :contact, :vatnumber, :bankaccount, :remarks )
+  end
+
+  def set_customer
+    @customer = Customer.all.find(params[:id])
   end
 
   def require_login
