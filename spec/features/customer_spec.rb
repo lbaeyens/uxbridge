@@ -33,19 +33,22 @@ RSpec.feature 'a new customer' do
   end
 end
 
-RSpec.feature 'new customer details ' do
+RSpec.feature 'existing customers ' do
   before do
     @john = User.create!(email: 'john@example.com', password: 'password')
 
     login_as @john
-    visit '/customers'
-    click_link 'Add Customer'
+    #TODO use factorygirl implementation for test customers instead
+    title = Title.create!(title: 'Familie')
+    postalcode = Postalcode.create!(postalcode: 9300)
+    @existing_customer = Customer.create!(title_id: title.id, lastname: "Doe", name: "John", address: "kerkstraat 13", postalcode_id: postalcode.id, telephone: "+32 53 21 21 21", mobilephone: "NA", fax: "NA", email: "john.doe@gardner.com", contact: "John", vatnumber: "NA", bankaccount: "NA", remarks: "" )
   end
 
-  scenario 'can be committed when logged in' do
-    find('#customer_title_id').find(:xpath, 'option[1]').select_option
-    click_button 'Add customer'
-    expect(page).to have_content('Customer has been created.')
+  scenario 'can be deleted' do
+    visit '/customers'
+    link = "//a[contains(@href, '/customers/#{@existing_customer.id}') and @data-method='delete']"
+    find(:xpath, link).click
+    expect(page).to have_content("Customer has been deleted")
   end
 
 end
