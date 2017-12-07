@@ -1,3 +1,3 @@
-class Title < ActiveRecord::Base
+class Title < ApplicationRecord
   validates :title, uniqueness: true
 end

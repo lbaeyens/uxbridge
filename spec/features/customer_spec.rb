@@ -51,4 +51,11 @@ RSpec.feature 'existing customers ' do
     expect(page).to have_content("Customer has been deleted")
   end
 
+  scenario 'can be edited'  do
+    visit '/customers'
+    find("a[href='/customers/#{@existing_customer.id}/edit']").click
+    expect(page).to have_content('Customer details')
+    expect(page).to have_field('customer_lastname', with: @existing_customer.lastname)
+  end
+
 end

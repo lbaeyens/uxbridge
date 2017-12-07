@@ -1,3 +1,3 @@
-class Repairstate < ActiveRecord::Base
+class Repairstate < ApplicationRecord
   validates :description, uniqueness: true
 end

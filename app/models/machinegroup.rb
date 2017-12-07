@@ -1,4 +1,4 @@
-class Machinegroup < ActiveRecord::Base
+class Machinegroup < ApplicationRecord
   validates :name, uniqueness: true
 
   has_many :machinetypes
